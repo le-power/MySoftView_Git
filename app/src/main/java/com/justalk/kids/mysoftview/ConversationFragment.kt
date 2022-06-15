@@ -200,10 +200,8 @@ class ConversationFragment : Fragment(), FragmentBackHandler, View.OnClickListen
             override fun onEnd(animation: WindowInsetsAnimationCompat?) {
                 //注册必须要有对应的事件,多出来的回调会导致布局错乱
                 binding.conversationRecyclerview.suppressLayout(false)
-
                 EmotionKeyboard.translationEnable = true
                 EmotionKeyboard.startSoft = false
-
                 //存储软键盘高度数据
                 val imeHeight = softViewSizeToolViewCallback!!.getImeHeight()
                 emotionKeyboard.keyBoardHeight = imeHeight
